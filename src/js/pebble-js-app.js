@@ -155,12 +155,12 @@ function sendWeather() {
       isDay = 1;
     }
     Pebble.sendAppMessage({
+        "is_day" : parseInt(isDay),
         "sky_now": parseInt(sky_now),
         "temp_now": temp_now,
         "city": city,
         "sky_tomorrow": parseInt(sky_tomorrow),
-        "temp_tomorrow": temp_tomorrow,
-        "is_day" : parseInt(isDay)});
+        "temp_tomorrow": temp_tomorrow});
   }
 }
 

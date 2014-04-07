@@ -28,6 +28,18 @@ static const uint32_t WEATHER_ICONS_DAY[] = {
   RESOURCE_ID_WEATHER_STORM_ICON_BLACK,               //8
 };
 
+static const uint32_t WEATHER_ICONS_NIGHT[] = {
+  RESOURCE_ID_WEATHER_CLOUDS_ICON_BLACK,              //0
+  RESOURCE_ID_WEATHER_PARTLY_CLOUDY_NIGHT_ICON_BLACK, //1
+  RESOURCE_ID_WEATHER_MOON_ICON_BLACK,                //2
+  RESOURCE_ID_WEATHER_LITTLE_SNOW_ICON_BLACK,         //3
+  RESOURCE_ID_WEATHER_SNOW_ICON_BLACK,                //4
+  RESOURCE_ID_WEATHER_SLEET_ICON_BLACK,               //5
+  RESOURCE_ID_WEATHER_DOWNPOUR_ICON_BLACK,            //6
+  RESOURCE_ID_WEATHER_RAIN_ICON_BLACK,                //7
+  RESOURCE_ID_WEATHER_STORM_ICON_BLACK,               //8
+};
+
 enum WeatherKey {
   WEATHER_NOW_KEY = 0x0,
   WEATHER_SKY_NOW_KEY = 0x1,              // TUPLE_INT
@@ -44,6 +56,8 @@ static char temp_now[15];
 static char temp_tomorrow[15];
 
 static int8_t callback_id = -1;
+
+static uint8_t is_day = 1;
 
 static void fetch_cmd(void) {
   Tuplet weather_tuple = TupletInteger(WEATHER_NOW_KEY, 1);
@@ -84,7 +98,11 @@ static void in_received_handler(DictionaryIterator *iter, void *context) {
           if (NULL == sky_now_icon) {
             gbitmap_destroy(sky_now_icon);
           }
-          sky_now_icon = gbitmap_create_with_resource(WEATHER_ICONS_DAY[tuple->value->uint8]);
+          if (is_day) {
+            sky_now_icon = gbitmap_create_with_resource(WEATHER_ICONS_DAY[tuple->value->uint8]);
+          } else {
+            sky_now_icon = gbitmap_create_with_resource(WEATHER_ICONS_NIGHT[tuple->value->uint8]);
+          }
           bitmap_layer_set_bitmap(sky_now_icon_layer, sky_now_icon);
         }
         break;
@@ -105,7 +123,8 @@ static void in_received_handler(DictionaryIterator *iter, void *context) {
         break;
       case WEATHER_ISDAY_KEY:
         APP_LOG(APP_LOG_LEVEL_DEBUG, "WEATHER_ISDAY_KEY %d", tuple->value->uint8);
-        layer_set_hidden(inverter_layer_get_layer(inv_layer), tuple->value->uint8);
+        is_day = tuple->value->uint8;
+        layer_set_hidden(inverter_layer_get_layer(inv_layer), is_day);
         break;
     }
     tuple = dict_read_next(iter);
