@@ -1,0 +1,147 @@
+{
+  "uuid": "ec70e1b1-2b87-4d58-a9d9-9e6cef830d4c",
+  "shortName": "MacWatch",
+  "longName": "MacWatch",
+  "companyName": "MacArrow Dev",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "is_day": 7,
+    "temp_tomorrow": 6,
+    "sky_tomorrow": 5,
+    "forecast": 4,
+    "city": 3,
+    "temp_now": 2,
+    "sky_now": 1,
+    "weather" : 0
+  },
+  "resources": {
+    "media": [
+    {
+        "menuIcon": true,
+        "type": "png",
+        "name": "IMAGE_MENU_ICON",
+        "file": "images/arrow-icon.png"
+    },
+    {
+        "type": "font",
+        "name": "FONT_ROBOTO_CONDENSED_21",
+        "file": "fonts/Roboto-Condensed.ttf"
+    },
+    {
+        "type": "font",
+        "name": "FONT_WEATHER_16",
+        "file": "fonts/Antonio-Bold.ttf"
+    },
+    {
+        "characterRegex": "[0-9:AaMmPp]",
+        "type": "font",
+        "name": "FONT_TIME_SUBSET_49",
+        "file": "fonts/digital-7 (mono).ttf"
+    },
+    {
+        "type": "png-trans",
+        "name": "BT_ICON",
+        "file": "images/bluetooth-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "BATTERY_20_ICON",
+        "file": "images/battery/battery_20.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "BATTERY_40_ICON",
+        "file": "images/battery/battery_40.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "BATTERY_60_ICON",
+        "file": "images/battery/battery_60.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "BATTERY_80_ICON",
+        "file": "images/battery/battery_80.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "BATTERY_100_ICON",
+        "file": "images/battery/battery_100.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "BATTERY_EMPTY_ICON",
+        "file": "images/battery/battery_empty.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "BATTERY_CHARGE_ICON",
+        "file": "images/battery/battery_charge.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_CLOUDS_ICON",
+        "file": "images/weather/clouds-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_DOWNPOUR_ICON",
+        "file": "images/weather/downpour-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_LITTLE_SNOW_ICON",
+        "file": "images/weather/little-snow-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_MOON_ICON",
+        "file": "images/weather/moon-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_PARTLY_CLOUDY_DAY_ICON",
+        "file": "images/weather/partly-cloudy-day-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_PARTLY_CLOUDY_NIGHT_ICON",
+        "file": "images/weather/partly-cloudy-night-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_RAIN_ICON",
+        "file": "images/weather/rain-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_SLEET_ICON",
+        "file": "images/weather/sleet-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_SNOW_ICON",
+        "file": "images/weather/snow-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_STORM_ICON",
+        "file": "images/weather/storm-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "WEATHER_SUN_ICON",
+        "file": "images/weather/sun-icon.png"
+    },
+    {
+        "type": "png-trans",
+        "name": "RUNNING_MAN_ICON",
+        "file": "images/running_man.png"
+    }
+    ]
+  }
+}

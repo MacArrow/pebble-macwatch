@@ -1,0 +1,8 @@
+
+# Ignore build generated files
+build
+Session.vim
+.lock*
+.*.swp
+.DS_Store
+

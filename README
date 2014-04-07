@@ -1,0 +1,13 @@
+MacWatch is a simple watch based on simplicity and weather examples from Pebble SDK
+
+Currently it is doing the following:
+
+- shows date and time
+- inverts screen after sunset
+- shows battery status
+- shows connection status
+    - it would vibrate twice when connection is lost
+- shows current temperature and air pressure for the current location
+- shows next day forecast for the current location
+
+
