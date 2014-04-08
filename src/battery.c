@@ -36,7 +36,7 @@ static void handle_battery(BatteryChargeState charge) {
 }
 
 void battery_init(Layer *window_layer) {
-  image_battery_icon_layer = bitmap_layer_create(GRect(98, 0, 48, 32));
+  image_battery_icon_layer = bitmap_layer_create(GRect(144-25, 0, 24, 24));
   bitmap_layer_set_compositing_mode(image_battery_icon_layer, GCompOpAssign);
   layer_add_child(window_layer, bitmap_layer_get_layer(image_battery_icon_layer));
   BatteryChargeState charge = battery_state_service_peek();
