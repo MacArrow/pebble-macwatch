@@ -112,14 +112,14 @@ void watch_init(Layer *window_layer) {
     memset(&callbacks[i], 0, sizeof(watch_callback_t));
   }
 
-  text_date_layer = text_layer_create(GRect(0, 106, 144, 23));
+  text_date_layer = text_layer_create(GRect(0, 102, 144, 22));
   text_layer_set_text_color(text_date_layer, GColorWhite);
   text_layer_set_background_color(text_date_layer, GColorClear);
   text_layer_set_font(text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));
   text_layer_set_text_alignment(text_date_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(text_date_layer));
 
-  text_time_layer = text_layer_create(GRect(0, 118, 144, 50));
+  text_time_layer = text_layer_create(GRect(0, 112, 144, 50));
   text_layer_set_text_color(text_time_layer, GColorWhite);
   text_layer_set_background_color(text_time_layer, GColorClear);
   text_layer_set_font(text_time_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_TIME_SUBSET_49)));
