@@ -86,11 +86,11 @@ function fetchForecast(latitude, longitude) {
         response = JSON.parse(req.responseText);
         if (response && response.list && response.list.length > 0) {
           var weatherResult = response.list[1];
-          var temp_night = Math.round(weatherResult.temp.night);
+          var temp_night = Math.round(weatherResult.temp.min);
           if (temp_night > 0) {
             temp_night = '+' + temp_night;
           }
-          var temp_day = Math.round(weatherResult.temp.day);
+          var temp_day = Math.round(weatherResult.temp.max);
           if (temp_day > 0) {
             temp_day = '+' + temp_day;
           }
