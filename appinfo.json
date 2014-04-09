@@ -9,14 +9,14 @@
     "watchface": true
   },
   "appKeys": {
-    "is_day": 7,
-    "temp_tomorrow": 6,
-    "sky_tomorrow": 5,
-    "forecast": 4,
-    "city": 3,
-    "temp_now": 2,
-    "sky_now": 1,
-    "weather" : 0
+    "temp_tomorrow": 7,
+    "sky_tomorrow": 6,
+    "forecast": 5,
+    "city": 4,
+    "temp_now": 3,
+    "sky_now": 2,
+    "weather" : 1,
+    "is_day": 0
   },
   "resources": {
     "media": [

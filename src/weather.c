@@ -41,14 +41,14 @@ static const uint32_t WEATHER_ICONS_NIGHT[] = {
 };
 
 enum WeatherKey {
-  WEATHER_NOW_KEY = 0x0,
-  WEATHER_SKY_NOW_KEY = 0x1,              // TUPLE_INT
-  WEATHER_TEMP_NOW_KEY = 0x2,             // TUPLE_CSTRING
-  WEATHER_CITY_KEY = 0x3,                 // TUPLE_CSTRING
-  WEATHER_FORECAST_KEY = 0x4,             // TUPLE_INT
-  WEATHER_SKY_TOMORROW_KEY = 0x5,         // TUPLE_INT
-  WEATHER_TEMP_TOMORROW_KEY = 0x6,        // TUPLE_CSTRING
-  WEATHER_ISDAY_KEY = 0x7,                // TUPLE_INT
+  WEATHER_ISDAY_KEY = 0x0,                // TUPLE_INT
+  WEATHER_NOW_KEY = 0x1,                  // TUPLE_INT
+  WEATHER_SKY_NOW_KEY = 0x2,              // TUPLE_INT
+  WEATHER_TEMP_NOW_KEY = 0x3,             // TUPLE_CSTRING
+  WEATHER_CITY_KEY = 0x4,                 // TUPLE_CSTRING
+  WEATHER_FORECAST_KEY = 0x5,             // TUPLE_INT
+  WEATHER_SKY_TOMORROW_KEY = 0x6,         // TUPLE_INT
+  WEATHER_TEMP_TOMORROW_KEY = 0x7,        // TUPLE_CSTRING
 };
 
 static char city[15];
